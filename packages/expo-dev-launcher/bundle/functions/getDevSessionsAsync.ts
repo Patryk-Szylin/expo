@@ -22,7 +22,7 @@ export async function getDevSessionsAsync(isAuthenticated = false): Promise<DevS
     devSessions = devSessions.concat(sessions);
   }
 
-  if (!isDevice) {
+  if (!devSessions.length && !isDevice) {
     const localPackagers = await getLocalPackagersAsync();
     devSessions = devSessions.concat(localPackagers);
   }
