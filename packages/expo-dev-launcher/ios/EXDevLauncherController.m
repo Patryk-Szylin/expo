@@ -181,7 +181,7 @@ NSString *fakeLauncherBundleUrl = @"embedded://EXDevLauncher/dummy";
   _launcherBridge = [[EXDevLauncherRCTBridge alloc] initWithDelegate:self launchOptions:_launchOptions];
 
   // Set up the `expo-dev-menu` delegate if menu is available
- [self _maybeInitDevMenuDelegate:_launcherBridge];
+  [self _maybeInitDevMenuDelegate:_launcherBridge];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:_launcherBridge
                                                    moduleName:@"main"
@@ -253,9 +253,9 @@ NSString *fakeLauncherBundleUrl = @"embedded://EXDevLauncher/dummy";
 
 - (NSURL *)sourceUrl
 {
- if (_shouldPreferUpdatesInterfaceSourceUrl && _updatesInterface && _updatesInterface.launchAssetURL) {
-   return _updatesInterface.launchAssetURL;
- }
+  if (_shouldPreferUpdatesInterfaceSourceUrl && _updatesInterface && _updatesInterface.launchAssetURL) {
+    return _updatesInterface.launchAssetURL;
+  }
   return _sourceUrl;
 }
 
@@ -385,7 +385,7 @@ NSString *fakeLauncherBundleUrl = @"embedded://EXDevLauncher/dummy";
     [self _addInitModuleObserver];
     
     [self.delegate devLauncherController:self didStartWithSuccess:YES];
-   [self _maybeInitDevMenuDelegate:self.appBridge];
+    [self _maybeInitDevMenuDelegate:self.appBridge];
 
     [self _ensureUserInterfaceStyleIsInSyncWithTraitEnv:self.window.rootViewController];
 
