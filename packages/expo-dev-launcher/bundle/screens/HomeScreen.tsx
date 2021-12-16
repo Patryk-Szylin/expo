@@ -306,7 +306,7 @@ function DevServerExplainerModal() {
         <Text>Then, select the local server when it appears here.</Text>
         <Spacer.Vertical size="small" />
         <Text>
-          Alternatively, open the Camera app and scan the QR code that appears in your terminal
+          Alternatively, open the Camera app and scan the QR code that appears in your terminal.
         </Text>
       </View>
     </View>
